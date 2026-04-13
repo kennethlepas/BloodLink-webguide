@@ -93,15 +93,10 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="relative group">
-                <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-slate-100 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
-                  <Image
-                    src="/logo.jpg"
-                    alt="BloodLink Story"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2647]/60 to-transparent opacity-60" />
+              <div className="relative group max-w-md mx-auto">
+                <div className="relative aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-[#0A2647] to-[#1e4b8f] flex items-center justify-center shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                  <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_white_0%,_transparent_70%)]" />
+                  <Heart className="h-40 w-40 text-red-500 drop-shadow-[0_0_35px_rgba(239,68,68,0.5)] animate-pulse" />
                 </div>
                 {/* Repositioned and resized card to prevent overlap with logo focal point */}
                 <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-8 rounded-[2rem] shadow-2xl max-w-xs border border-slate-100 animate-float">

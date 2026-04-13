@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { Droplets, RefreshCcw, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
@@ -54,7 +52,6 @@ const RECIPIENT_GUIDE = [
 export default function RecipientPage() {
     return (
         <>
-            <Navbar />
             <main className="bg-slate-50 flex-grow py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
@@ -112,7 +109,6 @@ export default function RecipientPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </>
     );
 }

@@ -1,4 +1,4 @@
-import { Heart, Shield, Users, MapPin, Award, Rocket, Globe, Sparkles } from "lucide-react";
+import { Heart, Shield, Users, MapPin, Award, Rocket, Globe, Sparkles, Activity } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -51,13 +51,14 @@ export default function AboutPage() {
             <section className="py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
-                        <div className="relative animate-float">
-                            <div className="relative aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
-                                <Image src="/logo.jpg" alt="BloodLink Mission" fill className="object-cover" />
+                        <div className="relative group animate-float">
+                            <div className="relative aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-tr from-[#0A2647] to-slate-800 flex items-center justify-center shadow-2xl group-hover:rotate-2 transition-all duration-500">
+                                <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+                                <Activity className="h-48 w-48 text-blue-400 drop-shadow-[0_0_40px_rgba(59,130,246,0.3)]" />
                             </div>
-                            <div className="absolute -bottom-8 -right-8 bg-red-600 text-white p-8 rounded-3xl shadow-xl max-w-xs">
+                            <div className="absolute -bottom-8 -right-8 bg-red-600 text-white p-8 rounded-3xl shadow-xl max-w-xs ring-4 ring-white">
                                 <p className="font-black text-2xl mb-2 italic">"Every drop counts."</p>
-                                <p className="text-sm font-medium opacity-90">Building the future of blood donation in Kenya.</p>
+                                <p className="text-sm font-medium opacity-90 leading-relaxed">Building the future of blood donation in Kenya.</p>
                             </div>
                         </div>
 
