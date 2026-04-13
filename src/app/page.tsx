@@ -96,13 +96,21 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="relative">
-                <div className="aspect-square rounded-[3rem] overflow-hidden bg-slate-100 shadow-2xl">
-                  <Image src="/logo.jpg" alt="BloodLink Story" fill className="object-cover" />
+              <div className="relative group">
+                <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden bg-slate-100 shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
+                  <Image
+                    src="/logo.jpg"
+                    alt="BloodLink Story"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A2647]/60 to-transparent opacity-60" />
                 </div>
-                <div className="absolute -bottom-8 -left-8 bg-red-600 text-white p-8 rounded-3xl shadow-xl max-w-xs">
-                  <p className="font-bold text-xl mb-2">"Every drop counts."</p>
-                  <p className="text-sm opacity-80">Connecting donors with urgent recipients in real time.</p>
+                {/* Repositioned and resized card to prevent overlap with logo focal point */}
+                <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-8 rounded-[2rem] shadow-2xl max-w-xs border border-slate-100 animate-float">
+                  <p className="font-black text-2xl text-[#0A2647] mb-2 italic">"Every drop counts."</p>
+                  <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Saving lives in Kenya</p>
+                  <div className="mt-4 w-12 h-1 bg-red-600 rounded-full" />
                 </div>
               </div>
             </div>

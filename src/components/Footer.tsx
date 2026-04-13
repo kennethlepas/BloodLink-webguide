@@ -1,81 +1,118 @@
-import { Camera, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Camera, Globe, Mail, MapPin, MessageCircle, MessageSquare, Phone, Play, Send } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="bg-slate-900 text-slate-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <footer className="bg-[#0A2647] text-slate-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-1">
-                        <div className="flex items-center space-x-2 mb-6">
-                            <Image
-                                src="/logo.jpg"
-                                alt="BloodLink Logo"
-                                width={40}
-                                height={50}
-                                className="rounded brightness-110"
-                            />
+                        <div className="flex items-center space-x-3 mb-6">
+                            <div className="relative w-10 h-12 rounded-lg overflow-hidden border border-white/20">
+                                <Image
+                                    src="/logo.jpg"
+                                    alt="BloodLink Logo"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
                             <span className="text-2xl font-black text-white tracking-tight">
                                 Blood<span className="text-red-500">Link</span>
                             </span>
                         </div>
-                        <p className="text-sm leading-relaxed mb-6">
-                            Connecting Donors · Saving Lives 🇰🇪. Every Drop Counts, Every Life Matters.
+                        <p className="text-sm leading-relaxed mb-8 opacity-80">
+                            Connecting Donors · Saving Lives 🇰🇪. Every Drop Counts, Every Life Matters. Founded in Nakuru, serving all 47 counties.
                         </p>
-                        <div className="flex space-x-4">
-                            <Link href="https://facebook.com/bloodlinkke" className="hover:text-red-500 transition-colors"><MessageCircle size={20} /></Link>
-                            <Link href="https://twitter.com/bloodlinkapp" className="hover:text-red-500 transition-colors"><Globe size={20} /></Link>
-                            <Link href="https://instagram.com/bloodlink.ke" className="hover:text-red-500 transition-colors"><Camera size={20} /></Link>
+                        <div className="flex flex-wrap gap-4">
+                            <Link href="https://facebook.com/bloodlinkke" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <MessageSquare size={18} />
+                            </Link>
+                            <Link href="https://twitter.com/bloodlinkapp" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <Send size={18} />
+                            </Link>
+                            <Link href="https://instagram.com/bloodlink.ke" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <Camera size={18} />
+                            </Link>
+                            <Link href="https://wa.me/254115408612" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <MessageCircle size={18} />
+                            </Link>
+                            <Link href="https://linkedin.com/company/bloodlink" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <Globe size={18} />
+                            </Link>
+                            <Link href="https://youtube.com/@bloodlinkke" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
+                                <Play size={18} />
+                            </Link>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Navigation */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Quick Links</h3>
-                        <ul className="space-y-4 text-sm">
-                            <li><Link href="/donor" className="hover:text-white transition-colors">Donor Guide</Link></li>
-                            <li><Link href="/recipient" className="hover:text-white transition-colors">Recipient Guide</Link></li>
-                            <li><Link href="/faq" className="hover:text-white transition-colors">FAQs</Link></li>
+                        <h3 className="text-white font-bold mb-6 text-lg">Platform</h3>
+                        <ul className="space-y-4 text-sm font-medium">
+                            <li><Link href="/" className="hover:text-red-400 transition-colors flex items-center gap-2">Home</Link></li>
+                            <li><Link href="/about" className="hover:text-red-400 transition-colors flex items-center gap-2">About Us</Link></li>
+                            <li><Link href="/donor" className="hover:text-red-400 transition-colors flex items-center gap-2">Donor Guide</Link></li>
+                            <li><Link href="/recipient" className="hover:text-red-400 transition-colors flex items-center gap-2">Recipient Guide</Link></li>
+                            <li><Link href="/faq" className="hover:text-red-400 transition-colors flex items-center gap-2">FAQs</Link></li>
                         </ul>
                     </div>
 
-                    {/* Guidelines */}
+                    {/* Support */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Support</h3>
-                        <ul className="space-y-4 text-sm">
-                            <li><Link href="/faq#eligibility" className="hover:text-white transition-colors">Eligibility</Link></li>
-                            <li><Link href="/donor#process" className="hover:text-white transition-colors">Process</Link></li>
-                            <li><Link href="/recipient#recovery" className="hover:text-white transition-colors">Recovery</Link></li>
+                        <h3 className="text-white font-bold mb-6 text-lg">Support</h3>
+                        <ul className="space-y-4 text-sm font-medium">
+                            <li><Link href="/contact" className="hover:text-red-400 transition-colors">Help Center</Link></li>
+                            <li><Link href="/faq#eligibility" className="hover:text-red-400 transition-colors">Eligibility Rules</Link></li>
+                            <li><Link href="/donor#process" className="hover:text-red-400 transition-colors">The Process</Link></li>
+                            <li><Link href="/recipient#safety" className="hover:text-red-400 transition-colors">Safety Protocols</Link></li>
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-white font-bold mb-6">Contact Us</h3>
-                        <ul className="space-y-4 text-sm">
-                            <li className="flex items-center space-x-3">
-                                <Mail size={16} className="text-red-500" />
-                                <span>support@bloodlink.co.ke</span>
+                        <h3 className="text-white font-bold mb-6 text-lg">Contact Us</h3>
+                        <ul className="space-y-5 text-sm">
+                            <li className="flex items-start space-x-3">
+                                <div className="p-2 rounded-lg bg-red-500/10 text-red-500">
+                                    <Mail size={18} />
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-xs uppercase font-bold text-slate-500 tracking-wider">Email Support</span>
+                                    <a href="mailto:kennethlepas@gmail.com" className="text-white hover:text-red-400 transition-colors font-medium">kennethlepas@gmail.com</a>
+                                </div>
                             </li>
-                            <li className="flex items-center space-x-3">
-                                <Phone size={16} className="text-red-500" />
-                                <span>+254 700 000 000</span>
+                            <li className="flex items-start space-x-3">
+                                <div className="p-2 rounded-lg bg-green-500/10 text-green-500">
+                                    <Phone size={18} />
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-xs uppercase font-bold text-slate-500 tracking-wider">Call / WhatsApp</span>
+                                    <a href="tel:+254115408612" className="text-white hover:text-red-400 transition-colors font-medium">+254 115 408 612</a>
+                                </div>
                             </li>
-                            <li className="flex items-center space-x-3 text-balance">
-                                <MapPin size={16} className="text-red-500 flex-shrink-0" />
-                                <span>Nakuru, Kenya</span>
+                            <li className="flex items-start space-x-3">
+                                <div className="p-2 rounded-lg bg-blue-500/10 text-blue-500">
+                                    <MapPin size={18} />
+                                </div>
+                                <div className="flex flex-col">
+                                    <span className="text-xs uppercase font-bold text-slate-500 tracking-wider">Location</span>
+                                    <span className="text-white font-medium">Nakuru, Kenya</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
-                    <p>© {new Date().getFullYear()} BloodLink Inc. All rights reserved. Made with ❤️ in Kenya 🇰🇪</p>
-                    <div className="flex space-x-6">
-                        <Link href="#" className="hover:text-white">Terms</Link>
-                        <Link href="#" className="hover:text-white">Privacy</Link>
+                <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
+                    <p className="opacity-60 text-center md:text-left">
+                        © {new Date().getFullYear()} BloodLink Inc. All rights reserved. <br className="md:hidden" />
+                        Designed with excellence for the Kenyan context.
+                    </p>
+                    <div className="flex space-x-8 font-bold">
+                        <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                     </div>
                 </div>
             </div>
