@@ -1,7 +1,5 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { ChevronDown, Clock, Droplet, Heart, Home, PlusCircle, Search, ShieldCheck, Trash, Trophy } from "lucide-react";
 import { useState } from "react";
 
@@ -68,7 +66,6 @@ export default function FAQPage() {
 
     return (
         <>
-            <Navbar />
             <main className="bg-slate-50 flex-grow py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-12">
@@ -82,7 +79,7 @@ export default function FAQPage() {
                         <input
                             type="text"
                             placeholder="Search questions, categories, or keywords..."
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
+                            className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all text-slate-900 placeholder:text-slate-400 font-bold"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
@@ -148,7 +145,6 @@ export default function FAQPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </>
     );
 }

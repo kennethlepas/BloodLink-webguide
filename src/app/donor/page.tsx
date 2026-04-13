@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { Calendar, CheckCircle2, Utensils } from "lucide-react";
 
 const DONOR_GUIDE = [
@@ -80,7 +78,6 @@ const DONOR_GUIDE = [
 export default function DonorPage() {
     return (
         <>
-            <Navbar />
             <main className="bg-slate-50 flex-grow py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-16">
@@ -138,7 +135,6 @@ export default function DonorPage() {
                     </div>
                 </div>
             </main>
-            <Footer />
         </>
     );
 }

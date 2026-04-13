@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import { Activity, ArrowRight, Droplet, Globe, Heart, ShieldCheck, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,7 +5,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-[#0A2647] pt-24 pb-32 lg:pt-40 lg:pb-48 text-white">
@@ -139,7 +136,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

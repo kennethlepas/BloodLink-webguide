@@ -19,22 +19,22 @@ export default function Navbar() {
     return (
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20">
+                <div className="flex justify-between h-28">
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center group">
-                            <div className="relative w-12 h-14 md:w-14 md:h-16 rounded-xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-md">
+                        <Link href="/" className="flex items-center group py-2">
+                            <div className="relative w-16 h-20 md:w-20 md:h-24 rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white">
                                 <Image
                                     src="/logo.jpg"
                                     alt="BloodLink Logo"
                                     fill
-                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="ml-3">
-                                <span className="text-xl md:text-2xl font-black text-[#0A2647] tracking-tight block leading-none">
+                            <div className="ml-4">
+                                <span className="text-2xl md:text-3xl font-black text-[#0A2647] tracking-tighter block leading-none">
                                     BLOODLINK
                                 </span>
-                                <span className="text-[10px] font-bold text-red-600 uppercase tracking-[0.2em]">
+                                <span className="text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-1 block">
                                     Kenya
                                 </span>
                             </div>
