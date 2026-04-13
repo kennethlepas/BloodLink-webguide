@@ -82,7 +82,7 @@ export default function FAQPage() {
                         <input
                             type="text"
                             placeholder="Search questions, categories, or keywords..."
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+                            className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
@@ -93,29 +93,29 @@ export default function FAQPage() {
                             filteredFaqs.map((faq, index) => (
                                 <div
                                     key={index}
-                                    className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${activeId === index ? 'border-blue-500 shadow-md shadow-blue-50' : 'border-slate-100 shadow-sm'
+                                    className={`bg-white rounded-2xl border transition-all duration-300 overflow-hidden ${activeId === index ? 'border-red-500 shadow-md shadow-red-50' : 'border-slate-100 shadow-sm'
                                         }`}
                                 >
                                     <button
                                         onClick={() => setActiveId(activeId === index ? null : index)}
                                         className="w-full flex items-center gap-4 p-5 text-left"
                                     >
-                                        <div className="p-2 bg-slate-50 rounded-xl flex-shrink-0">
+                                        <div className="p-2 bg-red-50 rounded-xl flex-shrink-0">
                                             {faq.icon}
                                         </div>
                                         <div className="flex-grow">
-                                            <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest mb-1 block">
+                                            <span className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-1 block">
                                                 {faq.category}
                                             </span>
                                             <h3 className="text-base font-bold text-slate-900 leading-tight">
                                                 {faq.q}
                                             </h3>
                                         </div>
-                                        <ChevronDown className={`h-5 w-5 text-slate-400 transition-transform duration-300 ${activeId === index ? 'rotate-180 text-blue-500' : ''}`} />
+                                        <ChevronDown className={`h-5 w-5 text-slate-400 transition-transform duration-300 ${activeId === index ? 'rotate-180 text-red-500' : ''}`} />
                                     </button>
 
                                     <div className={`transition-all duration-300 overflow-hidden ${activeId === index ? 'max-h-96' : 'max-h-0'}`}>
-                                        <div className="p-5 pt-0 ml-14 border-l-2 border-blue-50">
+                                        <div className="p-5 pt-0 ml-14 border-l-2 border-red-50">
                                             <p className="text-slate-600 text-sm leading-relaxed">
                                                 {faq.a}
                                             </p>
@@ -134,15 +134,15 @@ export default function FAQPage() {
                         )}
                     </div>
 
-                    <div className="mt-16 bg-blue-50 rounded-3xl p-8 border border-blue-100 flex flex-col md:flex-row items-center gap-6">
-                        <div className="p-4 bg-blue-600 rounded-2xl text-white">
+                    <div className="mt-16 bg-[#F8FAFC] rounded-3xl p-8 border border-slate-200 flex flex-col md:flex-row items-center gap-6">
+                        <div className="p-4 bg-[#0A2647] rounded-2xl text-white">
                             <PlusCircle size={32} />
                         </div>
                         <div className="flex-grow text-center md:text-left">
                             <h3 className="text-xl font-bold text-slate-900 mb-2">Still have questions?</h3>
                             <p className="text-slate-600 text-sm">Our support team is always ready to help you with any issues.</p>
                         </div>
-                        <button className="px-6 py-3 bg-blue-600 text-white font-black rounded-xl hover:bg-blue-700 transition-colors">
+                        <button className="px-6 py-3 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-colors">
                             Contact Support
                         </button>
                     </div>

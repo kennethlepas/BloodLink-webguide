@@ -20,15 +20,15 @@ export default function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center space-x-2">
-                            <Image 
-                                src="/icon.png" 
-                                alt="BloodLink Logo" 
-                                width={32} 
-                                height={32} 
-                                className="rounded-lg shadow-sm"
+                            <Image
+                                src="/logo.jpg"
+                                alt="BloodLink Logo"
+                                width={32}
+                                height={40}
+                                className="rounded shadow-sm"
                             />
                             <span className="text-xl font-black text-slate-900 tracking-tight">
-                                Blood<span className="text-blue-600">Link</span>
+                                Blood<span className="text-red-600">Link</span>
                             </span>
                         </Link>
                     </div>
@@ -39,24 +39,18 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"
+                                className="text-sm font-semibold text-slate-600 hover:text-red-600 transition-colors"
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <Link
-                            href="https://bloodlink.vercel.app" // Placeholder for main app
-                            className="px-4 py-2 bg-blue-600 text-white text-sm font-bold rounded-xl shadow-md shadow-blue-200 hover:bg-blue-700 transition-all hover:-translate-y-0.5"
-                        >
-                            Get Started
-                        </Link>
                     </div>
 
                     {/* Mobile menu button */}
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-slate-600 hover:text-blue-600 transition-colors"
+                            className="text-slate-600 hover:text-red-600 transition-colors"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
@@ -73,19 +67,11 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg"
+                                className="block px-3 py-2 text-base font-semibold text-slate-600 hover:text-red-600 hover:bg-slate-50 rounded-lg"
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="pt-2">
-                            <Link
-                                href="https://bloodlink.vercel.app"
-                                className="block w-full text-center px-4 py-3 bg-blue-600 text-white font-bold rounded-xl"
-                            >
-                                Get Started
-                            </Link>
-                        </div>
                     </div>
                 </div>
             )}

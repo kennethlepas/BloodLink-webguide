@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #2563EB;
+  --color-primary: #0A2647;
   --color-primary-foreground: #FFFFFF;
-  --color-secondary: #60A5FA;
-  --color-accent: #EA580C;
+  --color-secondary: #0a7ea4;
+  --color-accent: #EF4444;
   --color-background: #F8FAFC;
   --color-foreground: #0F172A;
   --color-card: #FFFFFF;
   --color-card-foreground: #1E293B;
   --color-border: #E2E8F0;
-  --color-ring: #3B82F6;
+  --color-ring: #144272;
 }
 
 :root {
@@ -36,11 +36,43 @@ body {
     @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
   }
 
-  .primary-gradient {
-    @apply bg-gradient-to-br from-blue-600 to-blue-500;
+  .accent-gradient {
+    @apply bg-gradient-to-br from-[#EF4444] to-[#B91C1C];
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-400;
+  .navy-gradient {
+    @apply bg-gradient-to-br from-[#0A2647] to-[#144272];
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
