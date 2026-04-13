@@ -1,5 +1,6 @@
-import { Camera, Droplet, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Camera, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -9,7 +10,13 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-1">
                         <div className="flex items-center space-x-2 mb-6">
-                            <Droplet className="h-8 w-8 text-blue-500" />
+                            <Image
+                                src="/icon.png"
+                                alt="BloodLink Logo"
+                                width={40}
+                                height={40}
+                                className="rounded-lg brightness-110"
+                            />
                             <span className="text-2xl font-black text-white tracking-tight">
                                 Blood<span className="text-blue-500">Link</span>
                             </span>

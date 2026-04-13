@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Droplets, RefreshCcw, ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 const RECIPIENT_GUIDE = [
     {
@@ -105,7 +106,7 @@ export default function RecipientPage() {
                             </button>
                         </div>
                         <div className="absolute top-0 right-0 p-8 opacity-10 -rotate-12">
-                            <Droplets size={200} />
+                            <Image src="/icon.png" alt="" width={200} height={200} />
                         </div>
                     </div>
                 </div>

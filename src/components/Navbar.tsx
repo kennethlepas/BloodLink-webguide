@@ -1,6 +1,7 @@
 "use client";
 
-import { Droplet, Menu, X } from "lucide-react";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,9 +20,13 @@ export default function Navbar() {
                 <div className="flex justify-between h-16">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center space-x-2">
-                            <div className="bg-blue-600 p-1.5 rounded-lg shadow-lg shadow-blue-200">
-                                <Droplet className="h-6 w-6 text-white" />
-                            </div>
+                            <Image 
+                                src="/icon.png" 
+                                alt="BloodLink Logo" 
+                                width={32} 
+                                height={32} 
+                                className="rounded-lg shadow-sm"
+                            />
                             <span className="text-xl font-black text-slate-900 tracking-tight">
                                 Blood<span className="text-blue-600">Link</span>
                             </span>

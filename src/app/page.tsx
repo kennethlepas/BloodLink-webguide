@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Activity, ArrowRight, Droplet, Heart, ShieldCheck, Users } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -95,7 +96,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-blue-600 rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-center text-white shadow-2xl shadow-blue-200">
               <div className="absolute top-0 right-0 p-8 opacity-10">
-                <Droplet size={200} />
+                <Image src="/icon.png" alt="" width={200} height={200} />
               </div>
               <h2 className="text-3xl md:text-5xl font-black mb-8">Ready to Save a Life?</h2>
               <p className="text-blue-100 text-lg mb-12 max-w-2xl mx-auto">
