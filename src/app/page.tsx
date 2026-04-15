@@ -32,7 +32,7 @@ export default function Home() {
               </h1>
 
               <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
-                BloodLink is dedicated to bridging the gap between blood donors and patients in need across Kenya. Every drop counts — and technology can save lives.
+                BloodLink is dedicated to bridging the gap between blood donors and patients in need across Kenya. Every drop counts, and technology can save lives.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">
@@ -102,7 +102,6 @@ export default function Home() {
                 <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-8 rounded-[2rem] shadow-2xl max-w-xs border border-slate-100 animate-float">
                   <p className="font-black text-2xl text-[#0A2647] mb-2 italic">"Every drop counts."</p>
                   <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Saving lives in Kenya</p>
-                  <div className="mt-4 w-12 h-1 bg-red-600 rounded-full" />
                 </div>
               </div>
             </div>

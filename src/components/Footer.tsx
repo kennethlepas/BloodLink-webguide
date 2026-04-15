@@ -9,18 +9,23 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-1">
-                        <div className="flex items-center space-x-3 mb-6">
-                            <div className="relative w-10 h-12 rounded-lg overflow-hidden border border-white/20">
+                        <div className="flex items-center group mb-6">
+                            <div className="relative w-12 h-16 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl bg-white/5 backdrop-blur-sm group-hover:border-red-500 transition-all duration-300">
                                 <Image
                                     src="/logo.jpg"
                                     alt="BloodLink Logo"
                                     fill
-                                    className="object-cover"
+                                    className="object-contain p-1 group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <span className="text-2xl font-black text-white tracking-tight">
-                                Blood<span className="text-red-500">Link</span>
-                            </span>
+                            <div className="ml-3">
+                                <span className="text-xl font-black text-white tracking-tighter block leading-none">
+                                    BLOODLINK
+                                </span>
+                                <span className="text-[10px] font-bold text-red-500 uppercase tracking-[0.3em] mt-1 block">
+                                    Kenya
+                                </span>
+                            </div>
                         </div>
                         <p className="text-sm leading-relaxed mb-8 opacity-80">
                             Connecting Donors · Saving Lives 🇰🇪. Every Drop Counts, Every Life Matters. Founded in Nakuru, serving all 47 counties.
