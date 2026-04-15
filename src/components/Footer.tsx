@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="col-span-1 md:col-span-1">
                         <div className="flex items-center group mb-6">
-                            <div className="relative w-12 h-16 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl bg-white/5 backdrop-blur-sm group-hover:border-red-500 transition-all duration-300">
+                            <div className="relative w-14 h-16 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl bg-white/5 backdrop-blur-sm group-hover:border-red-500 transition-all duration-300 flex-shrink-0">
                                 <Image
                                     src="/logo.jpg"
                                     alt="BloodLink Logo"

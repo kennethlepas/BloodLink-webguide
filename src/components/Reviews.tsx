@@ -33,7 +33,7 @@ export default function Reviews() {
 
                 const querySnapshot = await getDocs(q);
                 const fetchedReviews: Review[] = [];
-                querySnapshot.forEach((doc: any) => {
+                querySnapshot.forEach((doc) => {
                     fetchedReviews.push({ id: doc.id, ...doc.data() } as Review);
                 });
                 setReviews(fetchedReviews);
@@ -88,7 +88,7 @@ export default function Reviews() {
                             </div>
 
                             <p className="text-slate-600 italic mb-8 flex-grow leading-relaxed">
-                                "{review.review}"
+                                &quot;{review.review}&quot;
                             </p>
 
                             <div className="flex items-center gap-4 pt-6 border-t border-slate-50">
