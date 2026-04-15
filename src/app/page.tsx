@@ -1,6 +1,7 @@
-import { Activity, ArrowRight, Droplet, Globe, Heart, ShieldCheck, Users } from "lucide-react";
+import { Activity, ArrowRight, Droplet, Globe, Heart, ShieldCheck, Users, Info, Sparkles, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import Reviews from "@/components/Reviews";
 
 export default function Home() {
   return (
@@ -108,6 +109,83 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Why Donate Section - Kenyan Context */}
+        <section className="py-24 bg-white relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="order-2 lg:order-1">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-4">
+                    <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+                      <Image src="/images/story-1.png" alt="Kenyan Healthcare 1" fill className="object-cover" />
+                    </div>
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                      <Image src="/images/story-2.png" alt="Kenyan Healthcare 2" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="space-y-4 pt-8">
+                    <div className="relative aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
+                      <Image src="/images/story-3.png" alt="Kenyan Healthcare 3" fill className="object-cover" />
+                    </div>
+                    <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
+                      <Image src="/images/story-4.png" alt="Kenyan Healthcare 4" fill className="object-cover" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="order-1 lg:order-2">
+                <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-sm mb-6">Why Donate?</div>
+                <h2 className="text-4xl font-black text-slate-900 mb-8 leading-tight">Every drop is a lifeline for a Kenyan in need.</h2>
+
+                <div className="space-y-8">
+                  {[
+                    {
+                      icon: <Heart className="text-red-500" />,
+                      title: "Maternal Health Support",
+                      desc: "Massive blood loss during or after delivery is a leading cause of maternal mortality in Kenya. Your donation keeps mothers with their newborns."
+                    },
+                    {
+                      icon: <Droplet className="text-blue-500" />,
+                      title: "Saving Our Children",
+                      desc: "Malaria-associated anaemia and severe malnutrition are primary reasons for childhood blood transfusions in pediatric wards across the country."
+                    },
+                    {
+                      icon: <Activity className="text-green-500" />,
+                      title: "Critical Emergency Care",
+                      desc: "A single road traffic accident victim can require as many as 100 units of blood. With shortages reaching 80%, constant donations are vital."
+                    }
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-6 group">
+                      <div className="flex-shrink-0 w-12 h-12 bg-slate-50 rounded-2xl flex items-center justify-center group-hover:bg-red-50 transition-colors">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                        <p className="text-slate-600 leading-relaxed">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-12 p-8 bg-red-600 rounded-[2.5rem] text-white shadow-2xl shadow-red-900/40 relative overflow-hidden group">
+                  <div className="relative z-10 text-center">
+                    <p className="text-red-100 font-bold uppercase tracking-widest text-xs mb-2">Kenya's Reality</p>
+                    <h4 className="text-2xl font-black mb-4">We only collect 16-50% of the blood needed.</h4>
+                    <p className="text-red-50/80 text-sm leading-relaxed mb-6">
+                      Kenya requires between 500,000 to 1,000,000 units annually. Our mission is to bridge this gap through technology.
+                    </p>
+                    <Link href="/donor" className="inline-flex items-center gap-2 bg-white text-red-600 px-8 py-3 rounded-xl font-black hover:bg-red-50 transition-all">
+                      Become a Donor <ArrowRight size={18} />
+                    </Link>
+                  </div>
+                  <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-3xl group-hover:scale-125 transition-transform duration-700" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why BloodLink Section */}
         <section className="py-24 bg-slate-900 text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,6 +207,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Reviews Section */}
+        <Reviews />
       </main>
     </>
   );
