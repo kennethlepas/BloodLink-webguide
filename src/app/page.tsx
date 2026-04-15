@@ -61,7 +61,7 @@ export default function Home() {
               <h2 className="text-3xl font-black text-slate-900 mb-4">Our Impact in Kenya</h2>
               <p className="text-slate-600">Building a reliable lifesaving network for every Kenyan.</p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
               {[
                 { label: "Partner Hospitals", value: "500+", icon: <ShieldCheck className="text-red-600" /> },
                 { label: "Active Donors", value: "2,500+", icon: <Users className="text-blue-600" /> },

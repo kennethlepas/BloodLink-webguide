@@ -6,9 +6,9 @@ export default function Footer() {
     return (
         <footer className="bg-[#0A2647] text-slate-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
                     {/* Brand */}
-                    <div className="col-span-1 md:col-span-1">
+                    <div className="col-span-2 md:col-span-1">
                         <div className="flex items-center group mb-6">
                             <div className="relative w-14 h-16 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl bg-white/5 backdrop-blur-sm group-hover:border-red-500 transition-all duration-300 flex-shrink-0">
                                 <Image
@@ -75,8 +75,8 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contact */}
-                    <div>
+                    {/* Contact - Full width on mobile */}
+                    <div className="col-span-2 md:col-span-1">
                         <h3 className="text-white font-bold mb-6 text-lg">Contact Us</h3>
                         <ul className="space-y-5 text-sm">
                             <li className="flex items-start space-x-3">
