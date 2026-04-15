@@ -28,7 +28,7 @@ export default function Navbar() {
                         <Link href="/" className="flex items-center group py-2">
                             <div className="relative w-14 h-16 md:w-20 md:h-24 rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white flex-shrink-0">
                                 <Image
-                                    src="/logo.jpg"
+                                    src="/images/logo.jpg"
                                     alt="BloodLink Logo"
                                     fill
                                     priority

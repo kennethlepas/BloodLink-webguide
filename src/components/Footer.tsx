@@ -12,7 +12,7 @@ export default function Footer() {
                         <div className="flex items-center group mb-6">
                             <div className="relative w-14 h-16 rounded-2xl overflow-hidden border-2 border-white/10 shadow-xl bg-white/5 backdrop-blur-sm group-hover:border-red-500 transition-all duration-300 flex-shrink-0">
                                 <Image
-                                    src="/logo.jpg"
+                                    src="/images/logo.jpg"
                                     alt="BloodLink Logo"
                                     fill
                                     className="object-contain p-1 group-hover:scale-105 transition-transform duration-500"

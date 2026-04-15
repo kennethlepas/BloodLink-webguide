@@ -121,7 +121,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
               {[
                 {
-                  img: "/images/story-1.png",
+                  img: "/images/story-3.png",
                   icon: <Heart size={20} className="text-white" />,
                   iconBg: "bg-red-500",
                   title: "Maternal Health",
@@ -135,14 +135,14 @@ export default function Home() {
                   desc: "Malaria-associated anaemia and severe malnutrition are primary reasons for childhood blood transfusions in pediatric wards."
                 },
                 {
-                  img: "/images/story-3.png",
+                  img: "/images/story-4.png",
                   icon: <Activity size={20} className="text-white" />,
                   iconBg: "bg-green-500",
                   title: "Emergency Care",
                   desc: "A single road accident victim can require as many as 100 units of blood. With shortages reaching 80%, constant donations are vital."
                 },
                 {
-                  img: "/images/story-4.png",
+                  img: "/images/story-5.png",
                   icon: <ShieldCheck size={20} className="text-white" />,
                   iconBg: "bg-orange-500",
                   title: "Chronic Illness",
