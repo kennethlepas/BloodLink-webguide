@@ -113,7 +113,7 @@ export default function Footer() {
                 <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 text-xs">
                     <p className="opacity-60 text-center md:text-left">
                         © {new Date().getFullYear()} BloodLink Inc. All rights reserved. <br className="md:hidden" />
-                        Designed with excellence for the Kenyan context.
+                        Designed with excellence for the Kenyan context. 🇰🇪
                     </p>
                     <div className="flex space-x-8 font-bold">
                         <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
