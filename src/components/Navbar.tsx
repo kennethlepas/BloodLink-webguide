@@ -4,9 +4,11 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
 
     const navLinks = [
         { name: "Home", href: "/" },
@@ -16,13 +18,15 @@ export default function Navbar() {
         { name: "FAQ", href: "/faq" },
     ];
 
+    const isActive = (path: string) => pathname === path;
+
     return (
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-28">
+                <div className="flex justify-between h-20 md:h-28">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center group py-2">
-                            <div className="relative w-16 h-20 md:w-20 md:h-24 rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white">
+                            <div className="relative w-12 h-16 md:w-20 md:h-24 rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white">
                                 <Image
                                     src="/logo.jpg"
                                     alt="BloodLink Logo"
@@ -30,11 +34,11 @@ export default function Navbar() {
                                     className="object-contain p-1 group-hover:scale-105 transition-transform duration-500"
                                 />
                             </div>
-                            <div className="ml-4">
-                                <span className="text-2xl md:text-3xl font-black text-[#0A2647] tracking-tighter block leading-none">
+                            <div className="ml-3 md:ml-4">
+                                <span className="text-xl md:text-3xl font-black text-[#0A2647] tracking-tighter block leading-none">
                                     BLOODLINK
                                 </span>
-                                <span className="text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-1 block">
+                                <span className="text-[10px] md:text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-1 block">
                                     Kenya
                                 </span>
                             </div>
@@ -47,14 +51,20 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="px-4 py-2 rounded-xl text-sm font-bold text-[#0A2647] hover:bg-slate-50 hover:text-red-600 transition-all"
+                                className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${isActive(link.href)
+                                    ? "text-red-600 bg-red-50/50"
+                                    : "text-[#0A2647] hover:bg-slate-50 hover:text-red-600"
+                                    }`}
                             >
                                 {link.name}
                             </Link>
                         ))}
                         <Link
                             href="/contact"
-                            className="ml-4 px-6 py-2.5 rounded-xl text-sm font-bold text-white bg-red-600 hover:bg-red-700 transition-all shadow-lg shadow-red-100 active:scale-95"
+                            className={`ml-4 px-6 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg active:scale-95 ${isActive('/contact')
+                                ? "bg-red-700 text-white shadow-red-200"
+                                : "bg-red-600 text-white hover:bg-red-700 shadow-red-100"
+                                }`}
                         >
                             Contact Us
                         </Link>
@@ -81,7 +91,10 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className="block px-3 py-3 text-base font-bold text-[#0A2647] hover:text-red-600 hover:bg-slate-50 rounded-xl transition-all"
+                                className={`block px-3 py-3 text-base font-bold rounded-xl transition-all ${isActive(link.href)
+                                    ? "text-red-600 bg-red-50"
+                                    : "text-[#0A2647] hover:text-red-600 hover:bg-slate-50"
+                                    }`}
                             >
                                 {link.name}
                             </Link>
@@ -89,7 +102,10 @@ export default function Navbar() {
                         <Link
                             href="/contact"
                             onClick={() => setIsOpen(false)}
-                            className="block px-3 py-3 text-base font-bold text-white bg-red-600 rounded-xl text-center shadow-md mt-4"
+                            className={`block px-3 py-3 text-base font-bold rounded-xl text-center shadow-md mt-4 ${isActive('/contact')
+                                ? "bg-red-700 text-white"
+                                : "bg-red-600 text-white"
+                                }`}
                         >
                             Contact Us
                         </Link>
@@ -97,5 +113,6 @@ export default function Navbar() {
                 </div>
             )}
         </nav>
+
     );
 }

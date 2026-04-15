@@ -66,20 +66,20 @@ export default function FAQPage() {
 
     return (
         <>
-            <main className="bg-slate-50 flex-grow py-16 px-4 sm:px-6 lg:px-8">
+            <main className="bg-slate-50 flex-grow py-10 md:py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto">
-                    <div className="text-center mb-12">
-                        <h1 className="text-4xl font-black text-slate-900 mb-4">Frequently Asked Questions</h1>
-                        <p className="text-lg text-slate-600">Find answers to common questions about using BloodLink.</p>
+                    <div className="text-center mb-10 md:mb-12">
+                        <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Frequently Asked Questions</h1>
+                        <p className="text-base md:text-lg text-slate-600">Find answers to common questions about using BloodLink.</p>
                     </div>
 
                     {/* Search Bar */}
-                    <div className="relative mb-12">
+                    <div className="relative mb-10 md:mb-12">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
                         <input
                             type="text"
-                            placeholder="Search questions, categories, or keywords..."
-                            className="w-full pl-12 pr-4 py-4 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all text-slate-900 placeholder:text-slate-400 font-bold"
+                            placeholder="Search questions..."
+                            className="w-full pl-12 pr-4 py-3.5 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-red-500 focus:border-transparent outline-none transition-all text-slate-900 placeholder:text-slate-400 font-bold text-sm"
                             value={search}
                             onChange={(e) => setSearch(e.target.value)}
                         />
@@ -95,25 +95,25 @@ export default function FAQPage() {
                                 >
                                     <button
                                         onClick={() => setActiveId(activeId === index ? null : index)}
-                                        className="w-full flex items-center gap-4 p-5 text-left"
+                                        className="w-full flex items-center gap-3 md:gap-4 p-4 md:p-5 text-left"
                                     >
                                         <div className="p-2 bg-red-50 rounded-xl flex-shrink-0">
                                             {faq.icon}
                                         </div>
                                         <div className="flex-grow">
-                                            <span className="text-[10px] font-black text-red-600 uppercase tracking-widest mb-1 block">
+                                            <span className="text-[9px] font-black text-red-600 uppercase tracking-widest mb-1 block">
                                                 {faq.category}
                                             </span>
-                                            <h3 className="text-base font-bold text-slate-900 leading-tight">
+                                            <h3 className="text-sm md:text-base font-bold text-slate-900 leading-tight">
                                                 {faq.q}
                                             </h3>
                                         </div>
-                                        <ChevronDown className={`h-5 w-5 text-slate-400 transition-transform duration-300 ${activeId === index ? 'rotate-180 text-red-500' : ''}`} />
+                                        <ChevronDown className={`h-4 w-4 md:h-5 md:w-5 text-slate-400 transition-transform duration-300 ${activeId === index ? 'rotate-180 text-red-500' : ''}`} />
                                     </button>
 
                                     <div className={`transition-all duration-300 overflow-hidden ${activeId === index ? 'max-h-96' : 'max-h-0'}`}>
-                                        <div className="p-5 pt-0 ml-14 border-l-2 border-red-50">
-                                            <p className="text-slate-600 text-sm leading-relaxed">
+                                        <div className="p-4 md:p-5 pt-0 ml-10 md:ml-14 border-l-2 border-red-50">
+                                            <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                                                 {faq.a}
                                             </p>
                                         </div>
@@ -121,30 +121,31 @@ export default function FAQPage() {
                                 </div>
                             ))
                         ) : (
-                            <div className="text-center py-20 bg-white rounded-[2rem] border border-dashed border-slate-200">
+                            <div className="text-center py-16 md:py-20 bg-white rounded-[2rem] border border-dashed border-slate-200">
                                 <div className="p-4 bg-slate-50 rounded-full inline-block mb-4">
-                                    <Search className="h-8 w-8 text-slate-300" />
+                                    <Search className="h-6 w-6 md:h-8 md:w-8 text-slate-300" />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 mb-2">No results found</h3>
-                                <p className="text-slate-500">We couldn't find anything matching "{search}"</p>
+                                <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2">No results found</h3>
+                                <p className="text-sm text-slate-500">We couldn't find anything matching "{search}"</p>
                             </div>
                         )}
                     </div>
 
-                    <div className="mt-16 bg-[#F8FAFC] rounded-3xl p-8 border border-slate-200 flex flex-col md:flex-row items-center gap-6">
-                        <div className="p-4 bg-[#0A2647] rounded-2xl text-white">
-                            <PlusCircle size={32} />
+                    <div className="mt-12 md:mt-16 bg-[#F8FAFC] rounded-3xl p-6 md:p-8 border border-slate-200 flex flex-col md:flex-row items-center gap-6">
+                        <div className="p-4 bg-[#0A2647] rounded-2xl text-white flex-shrink-0">
+                            <PlusCircle size={28} />
                         </div>
                         <div className="flex-grow text-center md:text-left">
-                            <h3 className="text-xl font-bold text-slate-900 mb-2">Still have questions?</h3>
-                            <p className="text-slate-600 text-sm">Our support team is always ready to help you with any issues.</p>
+                            <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1 md:mb-2">Still have questions?</h3>
+                            <p className="text-slate-600 text-xs md:text-sm">Our support team is always ready to help you with any issues.</p>
                         </div>
-                        <button className="px-6 py-3 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-colors">
+                        <button className="w-full md:w-auto px-6 py-3 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-colors text-sm">
                             Contact Support
                         </button>
                     </div>
                 </div>
             </main>
         </>
+
     );
 }

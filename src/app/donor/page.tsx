@@ -78,35 +78,35 @@ const DONOR_GUIDE = [
 export default function DonorPage() {
     return (
         <>
-            <main className="bg-slate-50 flex-grow py-16 px-4 sm:px-6 lg:px-8">
+            <main className="bg-slate-50 flex-grow py-10 md:py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-sm mb-6 uppercase tracking-widest">Guide for Heroes</div>
-                        <h1 className="text-5xl font-black text-slate-900 mb-4">Donor Guide</h1>
-                        <p className="text-lg text-slate-600">Everything you need to know about becoming a life-saver in Kenya.</p>
+                    <div className="text-center mb-10 md:mb-16">
+                        <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-xs md:text-sm mb-6 uppercase tracking-widest">Guide for Heroes</div>
+                        <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">Donor Guide</h1>
+                        <p className="text-base md:text-lg text-slate-600">Everything you need to know about becoming a life-saver in Kenya.</p>
                     </div>
 
-                    <div className="space-y-12">
+                    <div className="space-y-8 md:space-y-12">
                         {DONOR_GUIDE.map((section) => (
-                            <div key={section.id} className="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-4 mb-8">
+                            <div key={section.id} className="bg-white rounded-[2rem] p-6 md:p-12 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                                <div className="flex items-center gap-4 mb-6 md:mb-8">
                                     <div className="p-3 bg-red-50 rounded-2xl">
                                         {section.icon}
                                     </div>
-                                    <h2 className="text-2xl font-bold text-slate-900">{section.title}</h2>
+                                    <h2 className="text-xl md:text-2xl font-bold text-slate-900">{section.title}</h2>
                                 </div>
 
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-balance">
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-balance">
                                     {section.content.map((item, i) => (
                                         <div key={i}>
-                                            <h3 className="text-sm font-black text-red-600 uppercase tracking-widest mb-6 border-b border-red-50 pb-2 inline-block">
+                                            <h3 className="text-[10px] md:text-xs font-black text-red-600 uppercase tracking-widest mb-4 md:mb-6 border-b border-red-50 pb-2 inline-block">
                                                 {item.subtitle}
                                             </h3>
-                                            <ul className="space-y-4">
+                                            <ul className="space-y-3 md:space-y-4">
                                                 {item.points.map((point, k) => (
                                                     <li key={k} className="flex items-start gap-3">
                                                         <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-red-400 flex-shrink-0" />
-                                                        <span className="text-slate-600 text-sm leading-relaxed">{point}</span>
+                                                        <span className="text-slate-600 text-xs md:text-sm leading-relaxed">{point}</span>
                                                     </li>
                                                 ))}
                                             </ul>
@@ -117,18 +117,19 @@ export default function DonorPage() {
                         ))}
                     </div>
 
-                    <div className="mt-20 bg-[#0A2647] rounded-[2.5rem] p-8 md:p-12 text-white overflow-hidden relative shadow-2xl shadow-blue-900/20">
+                    <div className="mt-16 md:mt-20 bg-[#0A2647] rounded-[2.5rem] p-6 md:p-12 text-white overflow-hidden relative shadow-2xl shadow-blue-900/20">
                         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="max-w-md text-center md:text-left">
-                                <h2 className="text-3xl font-black mb-4 uppercase">Ready to Donate?</h2>
-                                <p className="text-slate-300 mb-0 leading-relaxed">
+                                <h2 className="text-2xl md:text-3xl font-black mb-4 uppercase">Ready to Donate?</h2>
+                                <p className="text-slate-300 mb-0 text-sm md:text-base leading-relaxed">
                                     Join thousands of other Kenyan heroes who are making a difference every day. Find your nearest donation center in the BloodLink app.
                                 </p>
                             </div>
-                            <button className="px-8 py-4 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-colors whitespace-nowrap">
+                            <button className="w-full md:w-auto px-8 py-4 bg-red-600 text-white font-black rounded-2xl shadow-xl hover:bg-red-700 transition-colors whitespace-nowrap">
                                 Get the App
                             </button>
                         </div>
+
                         <div className="absolute top-0 right-0 p-8 opacity-10 -rotate-12">
                             <Heart size={200} />
                         </div>
