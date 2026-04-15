@@ -37,10 +37,10 @@ export default function Navbar() {
                             </div>
                             <div className="ml-3 md:ml-4">
                                 <span className="text-lg md:text-2xl font-black text-[#0A2647] tracking-tighter block leading-none">
-                                    BLOODLINK
+                                    Bloodlink
                                 </span>
-                                <span className="text-[9px] md:text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-0.5 block">
-                                    Kenya
+                                <span className="text-[9px] md:text-xs font-bold text-red-600 uppercase tracking-[0.2em] mt-0.5 block">
+                                    Online blood bank platform
                                 </span>
                             </div>
                         </Link>

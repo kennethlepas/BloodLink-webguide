@@ -19,7 +19,7 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-slate-50">
             {/* Hero Section */}
-            <section className="relative py-10 md:py-16 bg-[#0A2647] text-white overflow-hidden">
+            <section className="relative py-8 md:py-16 bg-[#0A2647] text-white overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -mr-48 -mt-48" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl -ml-32 -mb-32" />
 
@@ -33,7 +33,7 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="mt-12 md:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+                    <div className="mt-8 md:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-items-center">
                         {stats.map((stat, i) => (
                             <div key={i} className="bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-6 rounded-3xl text-center">
                                 <div className={`inline-flex p-2.5 md:p-3 rounded-2xl ${stat.bg} ${stat.color} mb-3 md:mb-4`}>
@@ -48,7 +48,7 @@ export default function AboutPage() {
             </section>
 
             {/* Content Sections */}
-            <section className="py-10 md:py-16">
+            <section className="py-8 md:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center mb-10 md:mb-16">
                         <div className="relative group animate-float">
@@ -131,7 +131,7 @@ export default function AboutPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-10 md:py-16">
+            <section className="py-8 md:py-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-red-600 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32" />

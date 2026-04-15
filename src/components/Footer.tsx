@@ -20,10 +20,10 @@ export default function Footer() {
                             </div>
                             <div className="ml-3">
                                 <span className="text-xl font-black text-white tracking-tighter block leading-none">
-                                    BLOODLINK
+                                    Bloodlink
                                 </span>
-                                <span className="text-[10px] font-bold text-red-500 uppercase tracking-[0.3em] mt-1 block">
-                                    Kenya
+                                <span className="text-[10px] font-bold text-red-500 uppercase tracking-[0.2em] mt-1 block">
+                                    Online blood bank platform
                                 </span>
                             </div>
                         </div>

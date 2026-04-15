@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-[#0A2647] pt-20 pb-24 md:pt-32 md:pb-40 lg:pt-40 lg:pb-48 text-white">
+        <section className="relative overflow-hidden bg-[#0A2647] pt-12 pb-16 md:pt-32 md:pb-40 lg:pt-40 lg:pb-48 text-white">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.05] pointer-events-none animate-pulse">
             <svg viewBox="0 0 100 100" className="w-full h-full">
               <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -27,7 +27,7 @@ export default function Home() {
                 <span className="text-xs font-bold text-white uppercase tracking-widest">Saving Lives Together 🇰🇪</span>
               </div>
 
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">
+              <h1 className="text-3xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">
                 BloodLink <br />
                 <span className="text-red-500">User Guide</span>
               </h1>
@@ -55,13 +55,13 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="bg-slate-50 py-12 md:py-20">
+        <section className="bg-slate-50 py-8 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 md:mb-16">
               <h2 className="text-3xl font-black text-slate-900 mb-4">Our Impact in Kenya</h2>
               <p className="text-slate-600">Building a reliable lifesaving network for every Kenyan.</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               {[
                 { label: "Partner Hospitals", value: "500+", icon: <ShieldCheck className="text-red-600" /> },
                 { label: "Active Donors", value: "2,500+", icon: <Users className="text-blue-600" /> },
@@ -79,7 +79,7 @@ export default function Home() {
         </section>
 
         {/* Story Section */}
-        <section className="py-12 md:py-20 bg-white">
+        <section className="py-8 md:py-20 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -100,7 +100,7 @@ export default function Home() {
                   <Heart className="h-40 w-40 text-red-500 drop-shadow-[0_0_35px_rgba(239,68,68,0.5)] animate-pulse" />
                 </div>
                 {/* Repositioned and resized card to prevent overlap with logo focal point */}
-                <div className="absolute -bottom-6 -left-6 md:-left-12 bg-white p-8 rounded-[2rem] shadow-2xl max-w-xs border border-slate-100 animate-float">
+                <div className="absolute -bottom-6 left-0 md:-left-12 bg-white p-6 md:p-8 rounded-[2rem] shadow-2xl max-w-[200px] md:max-w-xs border border-slate-100 animate-float">
                   <p className="font-black text-2xl text-[#0A2647] mb-2 italic">&quot;Every drop counts.&quot;</p>
                   <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Saving lives in Kenya</p>
                 </div>
@@ -110,7 +110,7 @@ export default function Home() {
         </section>
 
         {/* Why Donate Section - Kenyan Context */}
-        <section className="py-12 md:py-20 bg-white relative overflow-hidden">
+        <section className="py-8 md:py-20 bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10 md:mb-16">
               <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-sm mb-6">Why Donate?</div>
@@ -188,8 +188,8 @@ export default function Home() {
         {/* Why BloodLink Section */}
         <section className="py-12 md:py-20 bg-slate-900 text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-black mb-4">Why BloodLink?</h2>
+            <div className="text-center mb-10 md:mb-16">
+              <h2 className="text-2xl md:text-4xl font-black mb-4">Why BloodLink?</h2>
               <p className="text-slate-400">Advanced features designed to save lives.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
