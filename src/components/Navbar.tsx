@@ -23,10 +23,10 @@ export default function Navbar() {
     return (
         <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-20 md:h-28">
+                <div className="flex justify-between h-16 md:h-24">
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center group py-2">
-                            <div className="relative w-14 h-16 md:w-20 md:h-24 rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white flex-shrink-0">
+                        <Link href="/" className="flex items-center group py-1.5">
+                            <div className="relative w-11 h-13 md:w-16 md:h-20 rounded-xl md:rounded-2xl overflow-hidden border-2 border-slate-100 group-hover:border-red-500 transition-all duration-300 shadow-xl bg-white flex-shrink-0">
                                 <Image
                                     src="/images/logo.jpg"
                                     alt="BloodLink Logo"
@@ -36,10 +36,10 @@ export default function Navbar() {
                                 />
                             </div>
                             <div className="ml-3 md:ml-4">
-                                <span className="text-xl md:text-3xl font-black text-[#0A2647] tracking-tighter block leading-none">
+                                <span className="text-lg md:text-2xl font-black text-[#0A2647] tracking-tighter block leading-none">
                                     BLOODLINK
                                 </span>
-                                <span className="text-[10px] md:text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-1 block">
+                                <span className="text-[9px] md:text-xs font-bold text-red-600 uppercase tracking-[0.3em] mt-0.5 block">
                                     Kenya
                                 </span>
                             </div>

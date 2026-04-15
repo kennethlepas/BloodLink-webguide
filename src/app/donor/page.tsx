@@ -78,9 +78,9 @@ const DONOR_GUIDE = [
 export default function DonorPage() {
     return (
         <>
-            <main className="bg-slate-50 flex-grow py-10 md:py-16 px-4 sm:px-6 lg:px-8">
+            <main className="bg-slate-50 flex-grow py-8 md:py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-10 md:mb-16">
+                    <div className="text-center mb-8 md:mb-12">
                         <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-xs md:text-sm mb-6 uppercase tracking-widest">Guide for Heroes</div>
                         <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-4">Donor Guide</h1>
                         <p className="text-base md:text-lg text-slate-600">Everything you need to know about becoming a life-saver in Kenya.</p>
@@ -88,7 +88,7 @@ export default function DonorPage() {
 
                     <div className="space-y-8 md:space-y-12">
                         {DONOR_GUIDE.map((section) => (
-                            <div key={section.id} className="bg-white rounded-[2rem] p-6 md:p-12 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                            <div key={section.id} className="bg-white rounded-[2rem] p-6 md:p-10 shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                                 <div className="flex items-center gap-4 mb-6 md:mb-8">
                                     <div className="p-3 bg-red-50 rounded-2xl">
                                         {section.icon}
@@ -117,7 +117,7 @@ export default function DonorPage() {
                         ))}
                     </div>
 
-                    <div className="mt-16 md:mt-20 bg-[#0A2647] rounded-[2.5rem] p-6 md:p-12 text-white overflow-hidden relative shadow-2xl shadow-blue-900/20">
+                    <div className="mt-12 md:mt-16 bg-[#0A2647] rounded-[2.5rem] p-6 md:p-10 text-white overflow-hidden relative shadow-2xl shadow-blue-900/20">
                         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                             <div className="max-w-md text-center md:text-left">
                                 <h2 className="text-2xl md:text-3xl font-black mb-4 uppercase">Ready to Donate?</h2>

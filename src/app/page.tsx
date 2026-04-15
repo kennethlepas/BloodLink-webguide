@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-[#0A2647] pt-24 pb-32 lg:pt-40 lg:pb-48 text-white">
+        <section className="relative overflow-hidden bg-[#0A2647] pt-20 pb-24 md:pt-32 md:pb-40 lg:pt-40 lg:pb-48 text-white">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full opacity-[0.05] pointer-events-none animate-pulse">
             <svg viewBox="0 0 100 100" className="w-full h-full">
               <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
@@ -27,12 +27,12 @@ export default function Home() {
                 <span className="text-xs font-bold text-white uppercase tracking-widest">Saving Lives Together 🇰🇪</span>
               </div>
 
-              <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[1.1] mb-8 animate-fade-in-up [animation-delay:200ms]">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">
                 BloodLink <br />
                 <span className="text-red-500">User Guide</span>
               </h1>
 
-              <p className="max-w-3xl mx-auto text-lg md:text-xl text-slate-300 mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
+              <p className="max-w-3xl mx-auto text-base md:text-xl text-slate-300 mb-8 md:mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
                 BloodLink is dedicated to bridging the gap between blood donors and patients in need across Kenya. Every drop counts, and technology can save lives.
               </p>
 
@@ -55,9 +55,9 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="bg-slate-50 py-24">
+        <section className="bg-slate-50 py-12 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
               <h2 className="text-3xl font-black text-slate-900 mb-4">Our Impact in Kenya</h2>
               <p className="text-slate-600">Building a reliable lifesaving network for every Kenyan.</p>
             </div>
@@ -79,12 +79,12 @@ export default function Home() {
         </section>
 
         {/* Story Section */}
-        <section className="py-24 bg-white">
+        <section className="py-12 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-sm mb-6">Our Story</div>
-                <h2 className="text-4xl font-black text-slate-900 mb-8 leading-tight">Born out of a personal experience.</h2>
+                <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-6 md:mb-8 leading-tight">Born out of a personal experience.</h2>
                 <div className="space-y-6 text-slate-600 leading-relaxed">
                   <p>
                     BloodLink was born out of watching a loved one struggle to find compatible blood during an emergency. Founded in 2024, our team set out to build a solution that could work for any Kenyan, in any county, at any time.
@@ -110,15 +110,15 @@ export default function Home() {
         </section>
 
         {/* Why Donate Section - Kenyan Context */}
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-12 md:py-20 bg-white relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-10 md:mb-16">
               <div className="inline-block px-4 py-1.5 bg-red-50 text-red-600 rounded-full font-bold text-sm mb-6">Why Donate?</div>
-              <h2 className="text-4xl font-black text-slate-900 mb-4 leading-tight">Every drop is a lifeline for a Kenyan in need.</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 leading-tight">Every drop is a lifeline for a Kenyan in need.</h2>
               <p className="text-slate-600 max-w-2xl mx-auto">Your contribution directly supports these critical healthcare areas across Kenya.</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-16">
               {[
                 {
                   img: "/images/story-3.png",
@@ -164,7 +164,7 @@ export default function Home() {
               ))}
             </div>
 
-            <div className="max-w-4xl mx-auto p-12 bg-red-600 rounded-[3rem] text-white shadow-2xl shadow-red-900/40 relative overflow-hidden group">
+            <div className="max-w-4xl mx-auto p-8 md:p-12 bg-red-600 rounded-[2.5rem] md:rounded-[3rem] text-white shadow-2xl shadow-red-900/40 relative overflow-hidden group">
               <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
                 <div className="text-center md:text-left">
                   <p className="text-red-100 font-bold uppercase tracking-widest text-xs mb-4">Kenya&apos;s Reality</p>
@@ -186,10 +186,10 @@ export default function Home() {
         </section>
 
         {/* Why BloodLink Section */}
-        <section className="py-24 bg-slate-900 text-white overflow-hidden">
+        <section className="py-12 md:py-20 bg-slate-900 text-white overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-black mb-4">Why BloodLink?</h2>
+              <h2 className="text-3xl md:text-4xl font-black mb-4">Why BloodLink?</h2>
               <p className="text-slate-400">Advanced features designed to save lives.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

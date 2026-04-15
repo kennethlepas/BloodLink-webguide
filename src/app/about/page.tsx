@@ -19,7 +19,7 @@ export default function AboutPage() {
     return (
         <main className="min-h-screen bg-slate-50">
             {/* Hero Section */}
-            <section className="relative py-12 md:py-20 bg-[#0A2647] text-white overflow-hidden">
+            <section className="relative py-10 md:py-16 bg-[#0A2647] text-white overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -mr-48 -mt-48" />
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl -ml-32 -mb-32" />
 
@@ -48,9 +48,9 @@ export default function AboutPage() {
             </section>
 
             {/* Content Sections */}
-            <section className="py-12 md:py-20">
+            <section className="py-10 md:py-16">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center mb-16 md:mb-24">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center mb-10 md:mb-16">
                         <div className="relative group animate-float">
                             <div className="relative aspect-square rounded-[2.5rem] md:rounded-[3rem] overflow-hidden bg-gradient-to-tr from-[#0A2647] to-slate-800 flex items-center justify-center shadow-2xl group-hover:rotate-2 transition-all duration-500">
                                 <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
@@ -86,7 +86,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Features Grid */}
-                    <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-16 shadow-xl border border-slate-100">
+                    <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 shadow-xl border border-slate-100">
                         <div className="text-center mb-10 md:mb-16">
                             <h2 className="text-2xl md:text-4xl font-black text-[#0A2647] mb-3 md:mb-4">Why BloodLink?</h2>
                             <p className="text-sm md:text-base text-slate-500 font-medium">Innovative features designed for impact</p>
@@ -131,7 +131,7 @@ export default function AboutPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-12 md:py-20">
+            <section className="py-10 md:py-16">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="bg-red-600 rounded-[2.5rem] md:rounded-[3rem] p-8 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32" />

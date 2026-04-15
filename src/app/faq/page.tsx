@@ -66,15 +66,15 @@ export default function FAQPage() {
 
     return (
         <>
-            <main className="bg-slate-50 flex-grow py-10 md:py-16 px-4 sm:px-6 lg:px-8">
+            <main className="bg-slate-50 flex-grow py-8 md:py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto">
-                    <div className="text-center mb-10 md:mb-12">
+                    <div className="text-center mb-8 md:mb-10">
                         <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">Frequently Asked Questions</h1>
                         <p className="text-base md:text-lg text-slate-600">Find answers to common questions about using BloodLink.</p>
                     </div>
 
                     {/* Search Bar */}
-                    <div className="relative mb-10 md:mb-12">
+                    <div className="relative mb-8 md:mb-10">
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 h-5 w-5" />
                         <input
                             type="text"
@@ -131,7 +131,7 @@ export default function FAQPage() {
                         )}
                     </div>
 
-                    <div className="mt-12 md:mt-16 bg-[#F8FAFC] rounded-3xl p-6 md:p-8 border border-slate-200 flex flex-col md:flex-row items-center gap-6">
+                    <div className="mt-8 md:mt-12 bg-[#F8FAFC] rounded-3xl p-6 md:p-8 border border-slate-200 flex flex-col md:flex-row items-center gap-6">
                         <div className="p-4 bg-[#0A2647] rounded-2xl text-white flex-shrink-0">
                             <PlusCircle size={28} />
                         </div>

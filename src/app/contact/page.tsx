@@ -27,7 +27,7 @@ export default function ContactPage() {
     return (
         <main className="min-h-screen bg-slate-50">
             {/* Header */}
-            <section className="bg-[#0A2647] py-16 md:py-24 text-white relative overflow-hidden">
+            <section className="bg-[#0A2647] py-12 md:py-20 text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-red-600/10 rounded-full blur-3xl -mr-48 -mt-48" />
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
                     <h1 className="text-3xl md:text-6xl font-black mb-4 md:mb-6 tracking-tight animate-fade-in-up">Get in Touch</h1>
@@ -37,7 +37,7 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            <section className="py-12 md:py-20 -mt-8 md:-mt-12 relative z-20">
+            <section className="py-10 md:py-16 -mt-6 md:-mt-10 relative z-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                         {/* Info Cards */}
@@ -59,7 +59,7 @@ export default function ContactPage() {
 
                         {/* Contact Form */}
                         <div className="lg:col-span-2">
-                            <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-16 shadow-2xl border border-slate-100 h-full">
+                            <div className="bg-white rounded-[2.5rem] md:rounded-[3rem] p-6 md:p-12 shadow-2xl border border-slate-100 h-full">
                                 <h2 className="text-2xl md:text-3xl font-black text-[#0A2647] mb-6 md:mb-8">Send us a Message</h2>
                                 <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
