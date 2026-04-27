@@ -2,6 +2,7 @@
 
 import { ChevronDown, Clock, Droplet, Heart, Home, PlusCircle, Search, ShieldCheck, Trash, Trophy } from "lucide-react";
 import { useState } from "react";
+import Link from "next/link";
 
 const FAQ_DATA = [
     {
@@ -139,9 +140,11 @@ export default function FAQPage() {
                             <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-1 md:mb-2">Still have questions?</h3>
                             <p className="text-slate-600 text-xs md:text-sm">Our support team is always ready to help you with any issues.</p>
                         </div>
-                        <button className="w-full md:w-auto px-6 py-3 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-colors text-sm">
-                            Contact Support
-                        </button>
+                        <Link href="/contact" className="w-full md:w-auto">
+                            <button className="w-full px-6 py-3 bg-red-600 text-white font-black rounded-xl hover:bg-red-700 transition-colors text-sm">
+                                Contact Support
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </main>

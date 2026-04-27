@@ -68,7 +68,7 @@ export default function ContactPage() {
                                             <input
                                                 type="text"
                                                 required
-                                                className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm"
+                                                className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm text-black caret-black"
                                                 placeholder="Kenneth Lepas"
                                                 value={formData.name}
                                                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -79,7 +79,7 @@ export default function ContactPage() {
                                             <input
                                                 type="email"
                                                 required
-                                                className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm"
+                                                className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm text-black caret-black"
                                                 placeholder="ken@example.com"
                                                 value={formData.email}
                                                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -91,7 +91,7 @@ export default function ContactPage() {
                                         <input
                                             type="text"
                                             required
-                                            className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm"
+                                            className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium text-sm text-black caret-black"
                                             placeholder="How can we help?"
                                             value={formData.subject}
                                             onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
@@ -102,7 +102,7 @@ export default function ContactPage() {
                                         <textarea
                                             required
                                             rows={5}
-                                            className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium resize-none text-sm"
+                                            className="w-full px-5 md:px-6 py-3.5 md:py-4 bg-slate-50 border border-slate-100 rounded-2xl focus:outline-none focus:ring-2 focus:ring-red-500 transition-all font-medium resize-none text-sm text-black caret-black"
                                             placeholder="Write your message here..."
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
