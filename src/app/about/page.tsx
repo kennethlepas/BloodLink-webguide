@@ -33,7 +33,8 @@ export default function AboutPage() {
                         </p>
                     </div>
 
-                    <div className="mt-8 md:mt-16 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 justify-items-center">
+                    <div className="mt-8 md:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 justify-items-center">
+
                         {stats.map((stat, i) => (
                             <div key={i} className="bg-white/10 backdrop-blur-md border border-white/20 p-4 md:p-6 rounded-3xl text-center">
                                 <div className={`inline-flex p-2.5 md:p-3 rounded-2xl ${stat.bg} ${stat.color} mb-3 md:mb-4`}>
@@ -118,7 +119,8 @@ export default function AboutPage() {
                         <div className="flex flex-wrap justify-center gap-8 md:gap-12">
                             {team.map((m, i) => (
                                 <div key={i} className="group text-center">
-                                    <div className={`w-20 h-20 md:w-28 md:h-28 rounded-full ${m.color} flex items-center justify-center text-white text-xl md:text-3xl font-black mb-4 md:mb-6 shadow-xl group-hover:scale-110 transition-transform mx-auto`}>
+                                    <div className={`w-20 h-20 md:w-28 md:h-28 rounded-full ${m.color} flex items-center justify-center text-white text-xl md:text-3xl font-black mb-3 md:mb-6 shadow-xl group-hover:scale-110 transition-transform mx-auto`}>
+
                                         {m.initial}
                                     </div>
                                     <h3 className="text-lg md:text-xl font-black text-[#0A2647]">{m.name}</h3>

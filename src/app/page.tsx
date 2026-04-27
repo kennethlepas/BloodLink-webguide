@@ -27,14 +27,15 @@ export default function Home() {
                 <span className="text-xs font-bold text-white uppercase tracking-widest">Saving Lives Together 🇰🇪</span>
               </div>
 
-              <h1 className="text-3xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.1] mb-6 md:mb-8 animate-fade-in-up [animation-delay:200ms]">
                 BloodLink <br />
                 <span className="text-red-500">User Guide</span>
               </h1>
 
-              <p className="max-w-3xl mx-auto text-base md:text-xl text-slate-300 mb-8 md:mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
+              <p className="max-w-3xl mx-auto text-sm md:text-xl text-slate-300 mb-8 md:mb-12 leading-relaxed animate-fade-in-up [animation-delay:400ms]">
                 BloodLink is dedicated to bridging the gap between blood donors and patients in need across Kenya. Every drop counts, and technology can save lives.
               </p>
+
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up [animation-delay:600ms]">
                 <Link
@@ -61,7 +62,8 @@ export default function Home() {
               <h2 className="text-3xl font-black text-slate-900 mb-4">Our Impact in Kenya</h2>
               <p className="text-slate-600">Building a reliable lifesaving network for every Kenyan.</p>
             </div>
-            <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-8">
+
               {[
                 { label: "Partner Hospitals", value: "500+", icon: <ShieldCheck className="text-red-600" /> },
                 { label: "Active Donors", value: "2,500+", icon: <Users className="text-blue-600" /> },
@@ -97,13 +99,14 @@ export default function Home() {
               <div className="relative group max-w-md mx-auto">
                 <div className="relative aspect-square rounded-[3rem] overflow-hidden bg-gradient-to-br from-[#0A2647] to-[#1e4b8f] flex items-center justify-center shadow-2xl transition-transform duration-700 group-hover:scale-[1.02]">
                   <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_white_0%,_transparent_70%)]" />
-                  <Heart className="h-40 w-40 text-red-500 drop-shadow-[0_0_35px_rgba(239,68,68,0.5)] animate-pulse" />
+                  <Heart className="h-32 w-32 md:h-40 md:w-40 text-red-500 drop-shadow-[0_0_35px_rgba(239,68,68,0.5)] animate-pulse" />
                 </div>
                 {/* Repositioned and resized card to prevent overlap with logo focal point */}
-                <div className="absolute -bottom-6 left-0 md:-left-12 bg-white p-6 md:p-8 rounded-[2rem] shadow-2xl max-w-[200px] md:max-w-xs border border-slate-100 animate-float">
-                  <p className="font-black text-2xl text-[#0A2647] mb-2 italic">&quot;Every drop counts.&quot;</p>
-                  <p className="text-sm font-bold text-slate-500 uppercase tracking-widest">Saving lives in Kenya</p>
+                <div className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-12 bg-white p-5 md:p-8 rounded-2xl md:rounded-[2rem] shadow-2xl max-w-[160px] md:max-w-xs border border-slate-100 animate-float">
+                  <p className="font-black text-xl md:text-2xl text-[#0A2647] mb-1 md:mb-2 italic">&quot;Every drop counts.&quot;</p>
+                  <p className="text-[10px] md:text-sm font-bold text-slate-500 uppercase tracking-widest">Saving lives in Kenya</p>
                 </div>
+
               </div>
             </div>
           </div>

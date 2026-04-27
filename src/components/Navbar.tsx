@@ -83,27 +83,58 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile menu */}
-            {isOpen && (
-                <div className="md:hidden bg-white border-t border-slate-100 animate-in slide-in-from-top duration-300">
-                    <div className="px-4 pt-2 pb-6 space-y-1">
+            {/* Mobile menu and backdrop */}
+            <div
+                className={`fixed inset-0 z-40 md:hidden transition-all duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+                onClick={() => setIsOpen(false)}
+            >
+                <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" />
+            </div>
+
+            <div className={`fixed top-0 right-0 bottom-0 w-4/5 max-w-sm z-50 bg-white shadow-2xl md:hidden transition-transform duration-500 ease-out transform ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
+                <div className="flex flex-col h-full">
+                    <div className="flex items-center justify-between p-6 border-b border-slate-100">
+                        <div className="flex items-center">
+                            <div className="relative w-8 h-10 rounded-lg overflow-hidden border border-slate-100 bg-white flex-shrink-0">
+                                <Image
+                                    src="/images/logo.jpg"
+                                    alt="BloodLink Logo"
+                                    fill
+                                    className="object-contain p-0.5"
+                                />
+                            </div>
+                            <span className="ml-2 text-lg font-black text-[#0A2647] tracking-tighter">Bloodlink</span>
+                        </div>
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="p-2 rounded-xl text-slate-500 hover:bg-slate-100 transition-colors tap-active"
+                        >
+                            <X className="h-6 w-6" />
+                        </button>
+                    </div>
+
+                    <div className="flex-grow overflow-y-auto py-8 px-6 space-y-2">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-[0.2em] mb-4 ml-3">Menu</p>
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setIsOpen(false)}
-                                className={`block px-3 py-3 text-base font-bold rounded-xl transition-all ${isActive(link.href)
-                                    ? "text-red-600 bg-red-50"
+                                className={`flex items-center px-4 py-4 text-lg font-bold rounded-2xl transition-all tap-active ${isActive(link.href)
+                                    ? "text-red-600 bg-red-50 shadow-sm shadow-red-100"
                                     : "text-[#0A2647] hover:text-red-600 hover:bg-slate-50"
                                     }`}
                             >
                                 {link.name}
                             </Link>
                         ))}
+                    </div>
+
+                    <div className="p-6 border-t border-slate-100 bg-slate-50/50 safe-p-bottom">
                         <Link
                             href="/contact"
                             onClick={() => setIsOpen(false)}
-                            className={`block px-3 py-3 text-base font-bold rounded-xl text-center shadow-md mt-4 ${isActive('/contact')
+                            className={`block w-full py-5 rounded-2xl text-center text-lg font-black transition-all shadow-lg shadow-red-200 active:scale-95 tap-active ${isActive('/contact')
                                 ? "bg-red-700 text-white"
                                 : "bg-red-600 text-white"
                                 }`}
@@ -112,8 +143,9 @@ export default function Navbar() {
                         </Link>
                     </div>
                 </div>
-            )}
+            </div>
         </nav>
+
 
     );
 }

@@ -27,9 +27,10 @@ export default function Footer() {
                                 </span>
                             </div>
                         </div>
-                        <p className="text-sm leading-relaxed mb-8 opacity-80">
+                        <p className="text-xs md:text-sm leading-relaxed mb-8 opacity-80 max-w-sm">
                             Connecting Donors · Saving Lives 🇰🇪. Every Drop Counts, Every Life Matters. Founded in Nakuru, serving all 47 counties.
                         </p>
+
                         <div className="flex flex-wrap gap-4">
                             <Link href="https://facebook.com/bloodlinkke" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-red-500 hover:text-white transition-all duration-300">
                                 <MessageSquare size={18} />
